@@ -36,8 +36,8 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-xl gradient-wealth flex items-center justify-center">
                 <TrendingUp className="w-5 h-5 text-accent-foreground" />
               </div>
-              <span className="font-display font-bold text-xl">
-                Invest<span className="text-teal-400">IQ</span>
+            <span className="font-display font-bold text-xl">
+                Nivesh<span className="text-teal-400">AI</span>
               </span>
             </Link>
             <p className="text-trust-300 mb-6 max-w-sm leading-relaxed">
