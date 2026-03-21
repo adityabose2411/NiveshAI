@@ -145,7 +145,7 @@ const Footer = () => {
       <div className="border-t border-trust-800 bg-trust-950">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-trust-400">
-            <p>© {currentYear} InvestIQ Technologies Pvt. Ltd. All rights reserved.</p>
+            <p>© {currentYear} NiveshAI Technologies Pvt. Ltd. All rights reserved.</p>
             <p>
               Mutual Fund investments are subject to market risks. Read all scheme related documents
               carefully.

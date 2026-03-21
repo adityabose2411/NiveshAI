@@ -73,7 +73,7 @@ const ConnectBank = () => {
               Connect Your Bank Account
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Securely link your bank to enable InvestIQ's AI to analyze your transactions 
+              Securely link your bank to enable NiveshAI's AI to analyze your transactions 
               and create a personalized wealth plan.
             </p>
           </div>
