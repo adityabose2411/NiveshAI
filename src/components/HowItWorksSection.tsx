@@ -31,7 +31,7 @@ const HowItWorksSection = () => {
       icon: Cog,
       title: "Automate",
       subtitle: "Set & Forget",
-      description: "Approve once, and InvestIQ handles the rest—executing SIP mandates, rebalancing portfolios, and adjusting as your income grows.",
+      description: "Approve once, and NiveshAI handles the rest—executing SIP mandates, rebalancing portfolios, and adjusting as your income grows.",
       color: "trust",
     },
   ];

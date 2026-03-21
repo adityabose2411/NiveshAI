@@ -1,11 +1,11 @@
 import { Bot, Users, TrendingUp, Clock, Shield, Sparkles } from "lucide-react";
 
-const WhyInvestIQSection = () => {
+const WhyNiveshAISection = () => {
   const benefits = [
     {
       icon: Bot,
       title: "True Automation",
-      description: "Not just advice—InvestIQ executes. From SIP mandates to premium payments, everything runs on autopilot.",
+      description: "Not just advice—NiveshAI executes. From SIP mandates to premium payments, everything runs on autopilot.",
     },
     {
       icon: Users,
@@ -30,12 +30,12 @@ const WhyInvestIQSection = () => {
     {
       icon: Sparkles,
       title: "Continuous Optimization",
-      description: "As your income grows, InvestIQ automatically increases investments and rebalances your portfolio.",
+      description: "As your income grows, NiveshAI automatically increases investments and rebalances your portfolio.",
     },
   ];
 
   return (
-    <section id="why-investiq" className="py-20 bg-background relative overflow-hidden">
+    <section id="why-niveshai" className="py-20 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-50/50 via-transparent to-transparent" />
       
@@ -43,14 +43,14 @@ const WhyInvestIQSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-4 block">
-            Why InvestIQ
+            Why NiveshAI
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Built for India's <span className="gradient-text">Middle Class</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             We understand the challenges of busy professionals and growing families. 
-            InvestIQ is designed to make wealth creation effortless and accessible.
+            NiveshAI is designed to make wealth creation effortless and accessible.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const WhyInvestIQSection = () => {
         {/* Comparison */}
         <div className="mt-20 max-w-4xl mx-auto">
           <h3 className="font-display font-bold text-2xl text-center text-foreground mb-8">
-            Traditional vs InvestIQ
+            Traditional vs NiveshAI
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Traditional */}
@@ -112,9 +112,9 @@ const WhyInvestIQSection = () => {
               </ul>
             </div>
 
-            {/* InvestIQ */}
+            {/* NiveshAI */}
             <div className="p-6 rounded-2xl bg-teal-50 border border-teal-100">
-              <h4 className="font-semibold text-foreground mb-4">With InvestIQ</h4>
+              <h4 className="font-semibold text-foreground mb-4">With NiveshAI</h4>
               <ul className="space-y-3 text-sm text-foreground">
                 <li className="flex items-start gap-2">
                   <span className="text-wealth-600">✓</span>
@@ -145,4 +145,4 @@ const WhyInvestIQSection = () => {
   );
 };
 
-export default WhyInvestIQSection;
+export default WhyNiveshAISection;

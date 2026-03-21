@@ -33,7 +33,7 @@ const HeroSection = () => {
 
             {/* Subtext */}
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              InvestIQ's autonomous AI analyzes your UPI transactions, identifies surplus income, 
+              NiveshAI's autonomous AI analyzes your UPI transactions, identifies surplus income, 
               and automatically allocates funds into SIPs, bonds, and insurance—tailored to your 
               financial health.
             </p>

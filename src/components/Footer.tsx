@@ -36,8 +36,8 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-xl gradient-wealth flex items-center justify-center">
                 <TrendingUp className="w-5 h-5 text-accent-foreground" />
               </div>
-              <span className="font-display font-bold text-xl">
-                Invest<span className="text-teal-400">IQ</span>
+            <span className="font-display font-bold text-xl">
+                Nivesh<span className="text-teal-400">AI</span>
               </span>
             </Link>
             <p className="text-trust-300 mb-6 max-w-sm leading-relaxed">
@@ -126,7 +126,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-trust-300">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>hello@investiq.in</span>
+                <span>hello@niveshai.in</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -145,7 +145,7 @@ const Footer = () => {
       <div className="border-t border-trust-800 bg-trust-950">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-trust-400">
-            <p>© {currentYear} InvestIQ Technologies Pvt. Ltd. All rights reserved.</p>
+            <p>© {currentYear} NiveshAI Technologies Pvt. Ltd. All rights reserved.</p>
             <p>
               Mutual Fund investments are subject to market risks. Read all scheme related documents
               carefully.
