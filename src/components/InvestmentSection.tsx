@@ -1,6 +1,7 @@
 import { TrendingUp, Shield, Landmark, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const InvestmentSection = () => {
   const sips = [
@@ -23,11 +24,22 @@ const InvestmentSection = () => {
     { name: "Critical Illness", provider: "HDFC Life", cover: "₹25 L", premium: "₹450/mo", feature: "36 illnesses covered" },
   ];
 
+  const cardVariant = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true as const, margin: "-30px" as const },
+  };
+
   return (
     <section id="investments" className="py-20 bg-muted/30 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-4 block">
             Investment Coverage
           </span>
@@ -38,20 +50,26 @@ const InvestmentSection = () => {
             Based on your financial health score, we recommend from our carefully vetted 
             universe of SIPs, bonds, and insurance products.
           </p>
-        </div>
+        </motion.div>
 
-        {/* SIPs Section */}
+        {/* SIPs */}
         <div className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
+          <motion.div className="flex items-center gap-3 mb-6" {...cardVariant} transition={{ duration: 0.4 }}>
             <div className="w-10 h-10 rounded-xl bg-wealth-100 flex items-center justify-center">
               <TrendingUp className="w-5 h-5 text-wealth-600" />
             </div>
             <h3 className="font-display font-bold text-2xl text-foreground">SIP Investments</h3>
-          </div>
-          
+          </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {sips.map((sip, index) => (
-              <div key={index} className="fintech-card p-5 group cursor-pointer">
+              <motion.div 
+                key={index} 
+                className="fintech-card p-5 group cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+              >
                 <div className="flex justify-between items-start mb-3">
                   <span className="text-xs font-medium text-muted-foreground">{sip.provider}</span>
                   <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-wealth-600 transition-colors" />
@@ -71,23 +89,29 @@ const InvestmentSection = () => {
                     <span className="font-medium text-foreground">{sip.minAmount}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Bonds Section */}
+        {/* Bonds */}
         <div className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
+          <motion.div className="flex items-center gap-3 mb-6" {...cardVariant} transition={{ duration: 0.4 }}>
             <div className="w-10 h-10 rounded-xl bg-trust-100 flex items-center justify-center">
               <Landmark className="w-5 h-5 text-trust-600" />
             </div>
             <h3 className="font-display font-bold text-2xl text-foreground">Bond Portfolio</h3>
-          </div>
-          
+          </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {bonds.map((bond, index) => (
-              <div key={index} className="fintech-card p-5 group cursor-pointer">
+              <motion.div 
+                key={index} 
+                className="fintech-card p-5 group cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+              >
                 <div className="flex justify-between items-start mb-3">
                   <span className="text-xs font-medium text-muted-foreground">{bond.issuer}</span>
                   <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-trust-600 transition-colors" />
@@ -107,23 +131,29 @@ const InvestmentSection = () => {
                     <span className="font-medium text-foreground">{bond.minInvest}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Insurance Section */}
+        {/* Insurance */}
         <div>
-          <div className="flex items-center gap-3 mb-6">
+          <motion.div className="flex items-center gap-3 mb-6" {...cardVariant} transition={{ duration: 0.4 }}>
             <div className="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center">
               <Shield className="w-5 h-5 text-teal-600" />
             </div>
             <h3 className="font-display font-bold text-2xl text-foreground">Insurance Protection</h3>
-          </div>
-          
+          </motion.div>
           <div className="grid md:grid-cols-3 gap-4">
             {insurance.map((ins, index) => (
-              <div key={index} className="fintech-card p-5 group cursor-pointer">
+              <motion.div 
+                key={index} 
+                className="fintech-card p-5 group cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+              >
                 <div className="flex justify-between items-start mb-3">
                   <span className="text-xs font-medium text-muted-foreground">{ins.provider}</span>
                   <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-teal-600 transition-colors" />
@@ -140,19 +170,24 @@ const InvestmentSection = () => {
                     <span className="font-medium text-foreground">{ins.premium}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <Link to="/analyze">
             <Button variant="trust" size="lg">
               Get Personalized Recommendations
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

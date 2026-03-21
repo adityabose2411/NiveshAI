@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Shield, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -10,8 +11,6 @@ const HeroSection = () => {
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-wealth-500/20 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-trust-600/10 rounded-full blur-3xl" />
-        
-        {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
@@ -19,27 +18,35 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-primary-foreground/90">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-primary-foreground/90"
+            >
               <Sparkles className="w-4 h-4 text-teal-300" />
               <span>Powered by Agentic AI + UPI Insights</span>
-            </div>
+            </motion.div>
 
-            {/* Main Headline */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight"
+            >
               Turn Idle Savings into{" "}
               <span className="text-teal-300">Intelligent Wealth</span>
-            </h1>
+            </motion.h1>
 
-            {/* Subtext */}
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
+              className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            >
               NiveshAI's autonomous AI analyzes your UPI transactions, identifies surplus income, 
               and automatically allocates funds into SIPs, bonds, and insurance—tailored to your 
               financial health.
-            </p>
+            </motion.p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.45 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
               <Link to="/analyze">
                 <Button variant="wealth" size="xl" className="w-full sm:w-auto group">
                   Analyze My Financial Health
@@ -51,10 +58,12 @@ const HeroSection = () => {
                   See How It Works
                 </Button>
               </a>
-            </div>
+            </motion.div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-6 justify-center lg:justify-start pt-4">
+            <motion.div 
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.5 }}
+              className="flex flex-wrap gap-6 justify-center lg:justify-start pt-4"
+            >
               <div className="flex items-center gap-2 text-primary-foreground/70 text-sm">
                 <Shield className="w-4 h-4 text-teal-300" />
                 <span>Bank-Grade Security</span>
@@ -63,13 +72,15 @@ const HeroSection = () => {
                 <TrendingUp className="w-4 h-4 text-wealth-300" />
                 <span>SEBI Compliant</span>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Content - Stats/Visual */}
-          <div className="hidden lg:block relative">
+          <motion.div 
+            className="hidden lg:block relative"
+            initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }}
+          >
             <div className="relative w-full aspect-square max-w-lg mx-auto">
-              {/* Central Circle */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-64 h-64 rounded-full bg-gradient-to-br from-teal-500/30 to-wealth-500/30 backdrop-blur-xl border border-white/20 flex items-center justify-center animate-float">
                   <div className="text-center">
@@ -79,8 +90,11 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Floating Cards */}
-              <div className="absolute top-0 right-0 glass-card rounded-2xl p-4 animate-float" style={{ animationDelay: "0.5s" }}>
+              <motion.div 
+                className="absolute top-0 right-0 glass-card rounded-2xl p-4 animate-float" 
+                initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 }}
+                style={{ animationDelay: "0.5s" }}
+              >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-wealth-500/20 flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-wealth-300" />
@@ -90,9 +104,13 @@ const HeroSection = () => {
                     <p className="text-primary-foreground font-semibold">₹5,000</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="absolute bottom-12 left-0 glass-card rounded-2xl p-4 animate-float" style={{ animationDelay: "1s" }}>
+              <motion.div 
+                className="absolute bottom-12 left-0 glass-card rounded-2xl p-4 animate-float" 
+                initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }}
+                style={{ animationDelay: "1s" }}
+              >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center">
                     <Shield className="w-5 h-5 text-teal-300" />
@@ -102,9 +120,13 @@ const HeroSection = () => {
                     <p className="text-primary-foreground font-semibold">₹50L</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="absolute bottom-0 right-12 glass-card rounded-2xl p-4 animate-float" style={{ animationDelay: "1.5s" }}>
+              <motion.div 
+                className="absolute bottom-0 right-12 glass-card rounded-2xl p-4 animate-float" 
+                initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
+                style={{ animationDelay: "1.5s" }}
+              >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-trust-500/20 flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-trust-300" />
@@ -114,9 +136,9 @@ const HeroSection = () => {
                     <p className="text-primary-foreground font-semibold">85/100</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

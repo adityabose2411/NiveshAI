@@ -1,21 +1,24 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 const CTASection = () => {
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="relative rounded-3xl gradient-trust p-8 md:p-16 overflow-hidden">
-          {/* Background Elements */}
+        <motion.div 
+          className="relative rounded-3xl gradient-trust p-8 md:p-16 overflow-hidden"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
           <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-wealth-500/20 rounded-full blur-3xl" />
-          
-          {/* Grid Pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
           <div className="relative z-10 max-w-3xl mx-auto text-center">
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-primary-foreground/90 mb-6">
               <Sparkles className="w-4 h-4 text-teal-300" />
               <span>Start your wealth journey today</span>
@@ -47,7 +50,7 @@ const CTASection = () => {
               🔒 Bank-grade security • No credit card required • Takes only 2 minutes
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
