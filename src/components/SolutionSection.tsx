@@ -20,7 +20,7 @@ const SolutionSection = () => {
     {
       icon: Zap,
       title: "Automated Execution",
-      description: "Once approved, InvestIQ automatically executes SIP mandates, bond purchases, and insurance premiums.",
+      description: "Once approved, NiveshAI automatically executes SIP mandates, bond purchases, and insurance premiums.",
     },
   ];
 
