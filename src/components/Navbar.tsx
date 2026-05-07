@@ -41,7 +41,7 @@ const Navbar = () => {
               <TrendingUp className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="font-display font-bold text-xl text-foreground">
-              Nivesh<span className="gradient-text">AI</span>
+              Hundi<span className="gradient-text">AI</span>
             </span>
           </Link>
 

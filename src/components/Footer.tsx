@@ -37,7 +37,7 @@ const Footer = () => {
                 <TrendingUp className="w-5 h-5 text-accent-foreground" />
               </div>
             <span className="font-display font-bold text-xl">
-                Nivesh<span className="text-teal-400">AI</span>
+                Hundi<span className="text-teal-400">AI</span>
               </span>
             </Link>
             <p className="text-trust-300 mb-6 max-w-sm leading-relaxed">
