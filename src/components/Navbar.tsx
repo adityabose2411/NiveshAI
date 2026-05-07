@@ -18,6 +18,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "How It Works", href: "/#how-it-works" },
+    { name: "AI Agents", href: "/#agents" },
     { name: "Investments", href: "/#investments" },
     { name: "Why HundiAI", href: "/#why-hundiai" },
     { name: "Team", href: "/#team" },
@@ -67,7 +68,7 @@ const Navbar = () => {
             </Link>
             <Link to="/analyze">
               <Button variant="trust" size="sm">
-                Analyze My Finances
+                Start Autopilot
               </Button>
             </Link>
           </div>
@@ -103,7 +104,7 @@ const Navbar = () => {
                 </Link>
                 <Link to="/analyze" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="trust" className="w-full">
-                    Analyze My Finances
+                    Start Autopilot
                   </Button>
                 </Link>
               </div>
