@@ -18,8 +18,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "How It Works", href: "/#how-it-works" },
+    { name: "AI Agents", href: "/#agents" },
     { name: "Investments", href: "/#investments" },
-    { name: "Why NiveshAI", href: "/#why-niveshai" },
+    { name: "Why HundiAI", href: "/#why-hundiai" },
     { name: "Team", href: "/#team" },
   ];
 
@@ -41,7 +42,7 @@ const Navbar = () => {
               <TrendingUp className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="font-display font-bold text-xl text-foreground">
-              Nivesh<span className="gradient-text">AI</span>
+              Hundi<span className="gradient-text">AI</span>
             </span>
           </Link>
 
@@ -67,7 +68,7 @@ const Navbar = () => {
             </Link>
             <Link to="/analyze">
               <Button variant="trust" size="sm">
-                Analyze My Finances
+                Start Autopilot
               </Button>
             </Link>
           </div>
@@ -103,7 +104,7 @@ const Navbar = () => {
                 </Link>
                 <Link to="/analyze" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="trust" className="w-full">
-                    Analyze My Finances
+                    Start Autopilot
                   </Button>
                 </Link>
               </div>

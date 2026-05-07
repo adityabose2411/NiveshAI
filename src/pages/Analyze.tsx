@@ -397,7 +397,7 @@ const Analyze = () => {
                 </motion.p>
 
                 <p className="text-sm text-muted-foreground/60 mt-4">
-                  NiveshAI is building your personalized wealth plan...
+                  HundiAI is building your personalized wealth plan...
                 </p>
               </motion.div>
             )}
@@ -802,7 +802,7 @@ const Analyze = () => {
                     {formData.name ? `${formData.name}'s` : "Your"} Wealth Plan
                   </h2>
                   <p className="text-muted-foreground text-lg">
-                    Personalized by NiveshAI based on your complete financial profile
+                    Personalized by HundiAI based on your complete financial profile
                   </p>
                 </motion.div>
 
