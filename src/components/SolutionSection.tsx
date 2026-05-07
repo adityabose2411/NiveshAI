@@ -5,23 +5,23 @@ const SolutionSection = () => {
   const features = [
     {
       icon: Bot,
-      title: "Agentic AI Analysis",
-      description: "Our AI autonomously analyzes your income patterns, spending habits, and identifies optimal surplus for investing.",
+      title: "Autonomous AI Agents",
+      description: "A team of AI agents autonomously analyzes income patterns and optimizes your investable surplus in real time.",
     },
     {
       icon: Sparkles,
-      title: "UPI-Powered Insights",
-      description: "Direct bank statement analysis via Account Aggregator framework gives us real-time visibility into your financial health.",
+      title: "UPI-Native Intelligence",
+      description: "Real-time financial intelligence powered by your UPI flows via the Account Aggregator framework.",
     },
     {
       icon: Shield,
-      title: "Risk-Profiled Allocation",
-      description: "Personalized investment mix based on your age, goals, liabilities, and risk tolerance—no cookie-cutter portfolios.",
+      title: "AI-Driven Allocation",
+      description: "Agents execute risk-profiled allocation across equity, debt, and protection — no cookie-cutter portfolios.",
     },
     {
       icon: Zap,
-      title: "Automated Execution",
-      description: "Once approved, HundiAI automatically executes SIP mandates, bond purchases, and insurance premiums.",
+      title: "Autonomous Execution",
+      description: "HundiAI executes SIP mandates, bond purchases, and premium payments automatically — wealth on autopilot.",
     },
   ];
 
@@ -78,11 +78,11 @@ const SolutionSection = () => {
                 The Solution
               </span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Meet Your AI <span className="gradient-text">Wealth Engineer</span>
+                Everyone helps you invest. <span className="gradient-text">HundiAI invests for you.</span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                HundiAI combines the power of Agentic AI with India's UPI infrastructure to transform
-                passive savers into active wealth creators—automatically and intelligently.
+                HundiAI is India's autonomous AI wealth engine — agents that analyze, allocate, and
+                optimize your wealth automatically, around the clock.
               </p>
             </motion.div>
 
