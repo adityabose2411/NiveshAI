@@ -23,24 +23,23 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-primary-foreground/90"
             >
               <Sparkles className="w-4 h-4 text-teal-300" />
-              <span>Powered by Agentic AI + UPI Insights</span>
+              <span>India's Autonomous AI Wealth Engine</span>
             </motion.div>
 
             <motion.h1 
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight"
             >
-              Turn Idle Savings into{" "}
-              <span className="text-teal-300">Intelligent Wealth</span>
+              Your money{" "}
+              <span className="text-teal-300">grows itself.</span>
             </motion.h1>
 
             <motion.p 
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
               className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              HundiAI's autonomous AI analyzes your UPI transactions, identifies surplus income, 
-              and automatically allocates funds into SIPs, bonds, and insurance—tailored to your 
-              financial health.
+              HundiAI uses autonomous AI agents to analyze, allocate, and optimize your wealth
+              automatically. UPI transformed payments — HundiAI transforms wealth creation.
             </motion.p>
 
             <motion.div 
@@ -49,15 +48,15 @@ const HeroSection = () => {
             >
               <Link to="/analyze">
                 <Button variant="wealth" size="xl" className="w-full sm:w-auto group">
-                  Analyze My Financial Health
+                  Start Autopilot
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <a href="#how-it-works">
+              <Link to="/connect-bank">
                 <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
-                  See How It Works
+                  Connect Bank
                 </Button>
-              </a>
+              </Link>
             </motion.div>
 
             <motion.div 
