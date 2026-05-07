@@ -38,7 +38,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
               className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              NiveshAI's autonomous AI analyzes your UPI transactions, identifies surplus income, 
+              HundiAI's autonomous AI analyzes your UPI transactions, identifies surplus income, 
               and automatically allocates funds into SIPs, bonds, and insurance—tailored to your 
               financial health.
             </motion.p>

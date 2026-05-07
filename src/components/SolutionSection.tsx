@@ -21,7 +21,7 @@ const SolutionSection = () => {
     {
       icon: Zap,
       title: "Automated Execution",
-      description: "Once approved, NiveshAI automatically executes SIP mandates, bond purchases, and insurance premiums.",
+      description: "Once approved, HundiAI automatically executes SIP mandates, bond purchases, and insurance premiums.",
     },
   ];
 
@@ -81,7 +81,7 @@ const SolutionSection = () => {
                 Meet Your AI <span className="gradient-text">Wealth Engineer</span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                NiveshAI combines the power of Agentic AI with India's UPI infrastructure to transform
+                HundiAI combines the power of Agentic AI with India's UPI infrastructure to transform
                 passive savers into active wealth creators—automatically and intelligently.
               </p>
             </motion.div>

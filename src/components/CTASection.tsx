@@ -28,7 +28,7 @@ const CTASection = () => {
               Ready to Transform Your Savings?
             </h2>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Join thousands of Indians who are already using NiveshAI to convert idle 
+              Join thousands of Indians who are already using HundiAI to convert idle 
               savings into intelligent, automated wealth creation.
             </p>
 

@@ -19,7 +19,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "How It Works", href: "/#how-it-works" },
     { name: "Investments", href: "/#investments" },
-    { name: "Why NiveshAI", href: "/#why-niveshai" },
+    { name: "Why HundiAI", href: "/#why-hundiai" },
     { name: "Team", href: "/#team" },
   ];
 

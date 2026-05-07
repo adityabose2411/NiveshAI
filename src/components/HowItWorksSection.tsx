@@ -6,7 +6,7 @@ const HowItWorksSection = () => {
     { number: "01", icon: Search, title: "Track", subtitle: "Connect Your Accounts", description: "Securely link your bank accounts via Account Aggregator. We analyze 6-12 months of transaction data to understand your complete financial picture.", color: "trust" },
     { number: "02", icon: BarChart3, title: "Analyze", subtitle: "AI-Powered Insights", description: "Our Agentic AI identifies income patterns, recurring expenses, discretionary spending, and calculates your investable surplus with precision.", color: "teal" },
     { number: "03", icon: PieChart, title: "Allocate", subtitle: "Personalized Portfolio", description: "Based on your risk profile, goals, and health data, we recommend the optimal mix of SIPs, bonds, and insurance products.", color: "wealth" },
-    { number: "04", icon: Cog, title: "Automate", subtitle: "Set & Forget", description: "Approve once, and NiveshAI handles the rest—executing SIP mandates, rebalancing portfolios, and adjusting as your income grows.", color: "trust" },
+    { number: "04", icon: Cog, title: "Automate", subtitle: "Set & Forget", description: "Approve once, and HundiAI handles the rest—executing SIP mandates, rebalancing portfolios, and adjusting as your income grows.", color: "trust" },
   ];
 
   const getColorClasses = (color: string) => {

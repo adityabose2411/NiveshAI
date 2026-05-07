@@ -126,7 +126,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-trust-300">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>hello@niveshai.in</span>
+                <span>hello@hundiai.in</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -145,7 +145,7 @@ const Footer = () => {
       <div className="border-t border-trust-800 bg-trust-950">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-trust-400">
-            <p>© {currentYear} NiveshAI Technologies Pvt. Ltd. All rights reserved.</p>
+            <p>© {currentYear} HundiAI Technologies Pvt. Ltd. All rights reserved.</p>
             <p>
               Mutual Fund investments are subject to market risks. Read all scheme related documents
               carefully.
