@@ -21,27 +21,27 @@ const CTASection = () => {
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-primary-foreground/90 mb-6">
               <Sparkles className="w-4 h-4 text-teal-300" />
-              <span>Start your wealth journey today</span>
+              <span>Activate autopilot today</span>
             </div>
 
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-              Ready to Transform Your Savings?
+              Your money, on autopilot.
             </h2>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Join thousands of Indians who are already using HundiAI to convert idle 
-              savings into intelligent, automated wealth creation.
+              Join thousands of Indians letting HundiAI's autonomous AI agents grow their
+              wealth — automatically, intelligently, continuously.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/analyze">
                 <Button variant="wealth" size="xl" className="w-full sm:w-auto group">
-                  Analyze My Financial Health
+                  Start Autopilot
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link to="/connect-bank">
                 <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
-                  Connect My Bank
+                  Connect Bank
                 </Button>
               </Link>
             </div>
