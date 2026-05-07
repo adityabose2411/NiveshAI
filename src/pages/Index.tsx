@@ -4,7 +4,7 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import InvestmentSection from "@/components/InvestmentSection";
-import WhyHundiAISection from "@/components/WhyInvestIQSection";
+import WhyHundiAISection from "@/components/WhyHundiAISection";
 import TeamSection from "@/components/TeamSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
