@@ -17,10 +17,10 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         // Fintech specific variants
         hero: "gradient-trust text-primary-foreground shadow-elevated hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]",
-        heroOutline: "border-2 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/50 backdrop-blur-sm",
-        wealth: "gradient-wealth text-accent-foreground shadow-soft hover:shadow-elevated hover:scale-[1.02] active:scale-[0.98]",
-        trust: "bg-trust-700 text-primary-foreground hover:bg-trust-600 shadow-soft hover:shadow-elevated",
-        teal: "bg-teal-500 text-primary-foreground hover:bg-teal-400 shadow-soft hover:shadow-elevated",
+        heroOutline: "border border-foreground/15 bg-white/70 backdrop-blur-md text-foreground hover:bg-white hover:border-primary/40 shadow-soft",
+        wealth: "gradient-wealth text-primary-foreground shadow-elevated hover:shadow-glow hover:scale-[1.02] active:scale-[0.98]",
+        trust: "bg-foreground text-background hover:bg-foreground/90 shadow-soft hover:shadow-elevated",
+        teal: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-elevated",
       },
       size: {
         default: "h-11 px-6 py-2",

@@ -37,11 +37,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl gradient-trust flex items-center justify-center shadow-soft group-hover:shadow-elevated transition-shadow">
-              <TrendingUp className="w-5 h-5 text-primary-foreground" />
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <div className="w-9 h-9 rounded-xl gradient-trust flex items-center justify-center shadow-soft group-hover:shadow-glow transition-all">
+              <TrendingUp className="w-4.5 h-4.5 text-primary-foreground" />
             </div>
-            <span className="font-display font-bold text-xl text-foreground">
+            <span className="font-display font-bold text-xl tracking-tight text-foreground">
               Hundi<span className="gradient-text">AI</span>
             </span>
           </Link>
@@ -62,14 +62,10 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Link to="/connect-bank">
-              <Button variant="outline" size="sm">
-                Connect Bank
-              </Button>
+              <Button variant="outline" size="sm" className="rounded-xl">Connect Bank</Button>
             </Link>
             <Link to="/analyze">
-              <Button variant="trust" size="sm">
-                Start Autopilot
-              </Button>
+              <Button variant="wealth" size="sm" className="rounded-xl">Start Autopilot</Button>
             </Link>
           </div>
 
@@ -103,9 +99,7 @@ const Navbar = () => {
                   </Button>
                 </Link>
                 <Link to="/analyze" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="trust" className="w-full">
-                    Start Autopilot
-                  </Button>
+                  <Button variant="wealth" className="w-full rounded-xl">Start Autopilot</Button>
                 </Link>
               </div>
             </div>

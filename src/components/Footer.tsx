@@ -41,8 +41,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-trust-300 mb-6 max-w-sm leading-relaxed">
-              Democratizing Wealth with Agentic AI. India's autonomous AI wealth engine —
-              your money, on autopilot.
+              UPI transformed payments. <span className="text-primary font-medium">HundiAI transforms wealth creation.</span>
             </p>
             <div className="flex gap-4">
               <a
