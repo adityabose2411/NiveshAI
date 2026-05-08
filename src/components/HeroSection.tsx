@@ -1,154 +1,153 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Shield, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles, Shield, TrendingUp, Bot, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-wealth-500/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-trust-600/10 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
-      </div>
+    <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
+      {/* Background */}
+      <div className="absolute inset-0 grid-pattern opacity-40" />
+      <div className="absolute top-20 -right-32 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-wealth-300/20 rounded-full blur-3xl animate-pulse-slow" />
 
-      <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left space-y-8">
-            <motion.div 
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left */}
+          <div className="text-center lg:text-left space-y-7">
+            <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-primary-foreground/90"
+              className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-primary/20 rounded-full px-4 py-1.5 text-xs font-medium text-foreground shadow-soft"
             >
-              <Sparkles className="w-4 h-4 text-teal-300" />
-              <span>India's Autonomous AI Wealth Engine</span>
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              India's Autonomous AI Wealth Engine
             </motion.div>
 
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight"
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
+              className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] tracking-tight"
             >
               Your money{" "}
-              <span className="text-teal-300">grows itself.</span>
+              <span className="gradient-text">grows itself.</span>
             </motion.h1>
 
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            <motion.p
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              HundiAI uses autonomous AI agents to analyze, allocate, and optimize your wealth
-              automatically. UPI transformed payments — HundiAI transforms wealth creation.
+              HundiAI uses autonomous AI agents to analyze, allocate, and optimize your wealth automatically.
             </motion.p>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.45 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            <motion.div
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2"
             >
               <Link to="/analyze">
-                <Button variant="wealth" size="xl" className="w-full sm:w-auto group">
+                <Button variant="wealth" size="xl" className="w-full sm:w-auto group rounded-2xl">
                   Start Autopilot
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link to="/connect-bank">
-                <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
+                <Button variant="heroOutline" size="xl" className="w-full sm:w-auto rounded-2xl">
                   Connect Bank
                 </Button>
               </Link>
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.5 }}
-              className="flex flex-wrap gap-6 justify-center lg:justify-start pt-4"
+            <motion.div
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.5 }}
+              className="flex flex-wrap gap-x-6 gap-y-3 justify-center lg:justify-start pt-4 text-sm text-muted-foreground"
             >
-              <div className="flex items-center gap-2 text-primary-foreground/70 text-sm">
-                <Shield className="w-4 h-4 text-teal-300" />
-                <span>Bank-Grade Security</span>
-              </div>
-              <div className="flex items-center gap-2 text-primary-foreground/70 text-sm">
-                <TrendingUp className="w-4 h-4 text-wealth-300" />
-                <span>SEBI Compliant</span>
-              </div>
+              <div className="flex items-center gap-2"><Shield className="w-4 h-4 text-primary" /> Bank-Grade Security</div>
+              <div className="flex items-center gap-2"><Zap className="w-4 h-4 text-primary" /> SEBI Compliant</div>
+              <div className="flex items-center gap-2"><Bot className="w-4 h-4 text-primary" /> Agentic AI</div>
             </motion.div>
           </div>
 
-          {/* Right Content - Stats/Visual */}
-          <motion.div 
-            className="hidden lg:block relative"
-            initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }}
+          {/* Right - AI Dashboard Visual */}
+          <motion.div
+            className="relative hidden lg:block"
+            initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full bg-gradient-to-br from-teal-500/30 to-wealth-500/30 backdrop-blur-xl border border-white/20 flex items-center justify-center animate-float">
-                  <div className="text-center">
-                    <p className="text-6xl font-display font-bold text-primary-foreground">₹0</p>
-                    <p className="text-primary-foreground/60 text-sm mt-2">to Wealth Journey</p>
+            <div className="relative">
+              {/* Main Dashboard Card */}
+              <div className="glass-card rounded-3xl p-6 shadow-elevated">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg gradient-trust flex items-center justify-center">
+                      <Sparkles className="w-4 h-4 text-primary-foreground" />
+                    </div>
+                    <span className="font-semibold text-sm">HundiAI Autopilot</span>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-medium text-primary">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" /> Live
+                  </span>
+                </div>
+
+                <div>
+                  <p className="text-xs text-muted-foreground mb-1">Portfolio Value</p>
+                  <p className="text-4xl font-display font-bold tracking-tight">₹4,82,650</p>
+                  <p className="text-sm text-wealth-600 font-medium mt-1">+18.4% YTD · AI-optimized</p>
+                </div>
+
+                {/* Mini chart */}
+                <div className="mt-5 flex items-end gap-1.5 h-20">
+                  {[35, 48, 42, 60, 55, 72, 68, 85, 78, 92, 88, 100].map((h, i) => (
+                    <div key={i} className="flex-1 rounded-t-md gradient-wealth opacity-90" style={{ height: `${h}%` }} />
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-3 gap-3 mt-5 pt-5 border-t border-border/60">
+                  <div>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-wider">SIPs</p>
+                    <p className="text-sm font-semibold mt-0.5">₹15K/mo</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Bonds</p>
+                    <p className="text-sm font-semibold mt-0.5">₹2.1L</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-wider">Cover</p>
+                    <p className="text-sm font-semibold mt-0.5">₹50L</p>
                   </div>
                 </div>
               </div>
 
-              <motion.div 
-                className="absolute top-0 right-0 glass-card rounded-2xl p-4 animate-float" 
-                initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 }}
-                style={{ animationDelay: "0.5s" }}
+              {/* Floating cards */}
+              <motion.div
+                className="absolute -top-6 -right-6 glass-card rounded-2xl p-3 animate-float"
+                initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.7 }}
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-wealth-500/20 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-wealth-300" />
+                <div className="flex items-center gap-2">
+                  <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Bot className="w-4 h-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-primary-foreground/60 text-xs">Monthly SIP</p>
-                    <p className="text-primary-foreground font-semibold">₹5,000</p>
+                    <p className="text-[10px] text-muted-foreground">Agent action</p>
+                    <p className="text-xs font-semibold">Rebalanced ✓</p>
                   </div>
                 </div>
               </motion.div>
 
-              <motion.div 
-                className="absolute bottom-12 left-0 glass-card rounded-2xl p-4 animate-float" 
-                initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }}
+              <motion.div
+                className="absolute -bottom-5 -left-5 glass-card rounded-2xl p-3 animate-float"
+                initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.9 }}
                 style={{ animationDelay: "1s" }}
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-teal-500/20 flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-teal-300" />
+                <div className="flex items-center gap-2">
+                  <div className="w-9 h-9 rounded-xl bg-wealth-100 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-wealth-600" />
                   </div>
                   <div>
-                    <p className="text-primary-foreground/60 text-xs">Insurance Cover</p>
-                    <p className="text-primary-foreground font-semibold">₹50L</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                className="absolute bottom-0 right-12 glass-card rounded-2xl p-4 animate-float" 
-                initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}
-                style={{ animationDelay: "1.5s" }}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-trust-500/20 flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-trust-300" />
-                  </div>
-                  <div>
-                    <p className="text-primary-foreground/60 text-xs">AI Score</p>
-                    <p className="text-primary-foreground font-semibold">85/100</p>
+                    <p className="text-[10px] text-muted-foreground">AI Score</p>
+                    <p className="text-xs font-semibold">92 / 100</p>
                   </div>
                 </div>
               </motion.div>
             </div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-            fill="hsl(var(--background))"
-          />
-        </svg>
       </div>
     </section>
   );
