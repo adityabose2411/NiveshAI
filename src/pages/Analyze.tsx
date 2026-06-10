@@ -16,7 +16,7 @@ import {
   ArrowRight, ArrowLeft, User, Target, Heart, TrendingUp, Shield, Sparkles,
   CheckCircle2, PieChart as PieChartIcon, Landmark, AlertTriangle, Loader2,
   IndianRupee, Calendar, Activity, Download, RotateCcw, BadgeCheck, Zap,
-  BarChart3
+  BarChart3, Printer
 } from "lucide-react";
 
 type Step = "personal" | "goals" | "health" | "risk" | "analyzing" | "results";
@@ -282,6 +282,10 @@ const Analyze = () => {
   const handleRestart = () => {
     setCurrentStep("personal");
     setAnalyzeProgress(0);
+  };
+
+  const handleDownloadReport = () => {
+    window.print();
   };
 
   const fadeVariants = {
@@ -790,6 +794,45 @@ const Analyze = () => {
             {/* RESULTS DASHBOARD */}
             {currentStep === "results" && (
               <motion.div key="results" {...fadeVariants}>
+                {/* Print / Download action bar */}
+                <motion.div
+                  className="no-print flex flex-wrap items-center justify-between gap-3 mb-6 p-4 rounded-2xl border border-border/60 bg-gradient-to-r from-orange-50 to-amber-50"
+                  initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl gradient-wealth flex items-center justify-center">
+                      <Download className="w-5 h-5 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <p className="font-display font-semibold text-foreground leading-tight">Financial Health Report</p>
+                      <p className="text-xs text-muted-foreground">Save a PDF copy or print to share with your advisor</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" onClick={handleDownloadReport} className="gap-2 rounded-xl">
+                      <Printer className="w-4 h-4" />
+                      Print
+                    </Button>
+                    <Button variant="wealth" size="sm" onClick={handleDownloadReport} className="gap-2 rounded-xl">
+                      <Download className="w-4 h-4" />
+                      Download PDF
+                    </Button>
+                  </div>
+                </motion.div>
+
+                {/* Print-only header */}
+                <div className="hidden print:block mb-6 pb-4 border-b border-border">
+                  <div className="flex justify-between items-end">
+                    <div>
+                      <p className="font-display font-bold text-2xl text-foreground">HundiAI · Financial Health Report</p>
+                      <p className="text-sm text-muted-foreground">
+                        Prepared for {formData.name || "You"} · {new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
+                      </p>
+                    </div>
+                    <p className="text-xs text-muted-foreground">hundiai.com</p>
+                  </div>
+                </div>
+
                 {/* Header */}
                 <motion.div className="text-center mb-10" variants={staggerItem}>
                   <motion.div 
