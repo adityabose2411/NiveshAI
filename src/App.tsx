@@ -15,6 +15,17 @@ import CFOChat from "./pages/app/CFOChat";
 import Transactions from "./pages/app/Transactions";
 import Reconciliation from "./pages/app/Reconciliation";
 import Expenses from "./pages/app/Expenses";
+import CashFlow from "./pages/app/CashFlow";
+import Receivables from "./pages/app/Receivables";
+import Payables from "./pages/app/Payables";
+import Budgets from "./pages/app/Budgets";
+import Planning from "./pages/app/Planning";
+import Reports from "./pages/app/Reports";
+import Formulas from "./pages/app/Formulas";
+import Agents from "./pages/app/Agents";
+import Audit from "./pages/app/Audit";
+import Integrations from "./pages/app/Integrations";
+import Settings from "./pages/app/Settings";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +51,17 @@ const App = () => (
                     <Route path="transactions" element={<Transactions />} />
                     <Route path="reconciliation" element={<Reconciliation />} />
                     <Route path="expenses" element={<Expenses />} />
+                    <Route path="cashflow" element={<CashFlow />} />
+                    <Route path="receivables" element={<Receivables />} />
+                    <Route path="payables" element={<Payables />} />
+                    <Route path="budgets" element={<Budgets />} />
+                    <Route path="planning" element={<Planning />} />
+                    <Route path="reports" element={<Reports />} />
+                    <Route path="formulas" element={<Formulas />} />
+                    <Route path="agents" element={<Agents />} />
+                    <Route path="audit" element={<Audit />} />
+                    <Route path="integrations" element={<Integrations />} />
+                    <Route path="settings" element={<Settings />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </AppLayout>
