@@ -64,8 +64,8 @@ const Navbar = () => {
             <Link to="/connect-bank">
               <Button variant="outline" size="sm" className="rounded-xl">Connect Bank</Button>
             </Link>
-            <Link to="/analyze">
-              <Button variant="wealth" size="sm" className="rounded-xl">Start Autopilot</Button>
+            <Link to="/app">
+              <Button size="sm" className="rounded-xl">Open AI CFO</Button>
             </Link>
           </div>
 
@@ -98,8 +98,8 @@ const Navbar = () => {
                     Connect Bank
                   </Button>
                 </Link>
-                <Link to="/analyze" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="wealth" className="w-full rounded-xl">Start Autopilot</Button>
+                <Link to="/app" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full rounded-xl">Open AI CFO</Button>
                 </Link>
               </div>
             </div>
