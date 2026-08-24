@@ -87,8 +87,10 @@ export const KpiCard = ({
         {label}
         {hint && (
           <Tooltip>
-            <TooltipTrigger>
-              <Info className="w-3 h-3 opacity-60" />
+            <TooltipTrigger asChild>
+              <span className="inline-flex">
+                <Info className="w-3 h-3 opacity-60" />
+              </span>
             </TooltipTrigger>
             <TooltipContent className="max-w-xs text-xs">{hint}</TooltipContent>
           </Tooltip>
