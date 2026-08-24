@@ -18,6 +18,7 @@ import {
   Receipt,
   ScrollText,
   Settings,
+  Sigma,
   ShieldCheck,
   Sparkles,
   Target,
@@ -59,6 +60,7 @@ const groups = [
       { to: "/app/budgets", label: "Budgets", icon: Target },
       { to: "/app/planning", label: "Planning", icon: BarChart3 },
       { to: "/app/reports", label: "Reports", icon: FileText },
+      { to: "/app/formulas", label: "Formula Library", icon: Sigma },
     ],
   },
   {
