@@ -335,7 +335,14 @@ const valuationReport: ReportDef["build"] = (m) => {
             ["Tested-party operating margin", pct(m.grossMargin)],
             ["Arm's length range (35th–65th pct)", `${pct(tp.p35)} – ${pct(tp.p65)}`],
             ["Median of comparables", pct(tp.median)],
-            ["Within range?", tp.compliant ? "Yes — no adjustment" : "No — adjustment required"],
+            [
+              "Within range?",
+              tp.compliant
+                ? "Yes — no adjustment"
+                : tp.adjustmentMargin > 0
+                  ? "Below range — upward adjustment required"
+                  : "Above range — no adjustment (margin exceeds range)",
+            ],
             ["Primary adjustment exposure", inrFull(Math.round(tp.adjustment))],
           ],
           widthHints: { 0: 70 },
@@ -361,7 +368,13 @@ const costReport: ReportDef["build"] = (m, txns) => {
         kpis: [
           { label: "Annual savings identified", value: inr(savings) },
           { label: "As % of annual spend", value: pct(savings / Math.max(m.avgExpenses * 12, 1)) },
-          { label: "Runway impact", value: `+${(m.cashBalance / Math.max(m.burn - savings / 12, 1) - m.runwayMonths).toFixed(1)} months` },
+          {
+            label: "Runway impact",
+            value:
+              m.burn > 0
+                ? `+${(m.cashBalance / Math.max(m.burn - savings / 12, 1) - m.runwayMonths).toFixed(1)} months`
+                : "Cash-flow positive — extends buffer",
+          },
           { label: "Vendors driving 80% spend", value: `${vital.length} of ${vendors.length}` },
           { label: "6-month spend base", value: inr(total) },
           { label: "Techniques applied", value: "6" },
